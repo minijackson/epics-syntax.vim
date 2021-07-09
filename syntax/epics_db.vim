@@ -20,8 +20,8 @@ syntax match dbStringFreqUnit /minutes\?/ contained
 syntax match dbStringFreqUnit /seconds\?/ contained
 
 syntax cluster dbMacro contains=dbParenMacro,dbBraceMacro
-syntax region dbParenMacro matchgroup=dbMacroDelimiter start=/$(/ end=/)/ contains=dbVariableWithDefault,dbVariable skipwhite contained
-syntax region dbBraceMacro matchgroup=dbMacroDelimiter start=/${/ end=/}/ contains=dbVariableWithDefault,dbVariable skipwhite contained
+syntax region dbParenMacro matchgroup=dbMacroDelimiter start=/$(/ end=/)/ contains=dbVariableWithDefault,dbVariable contained
+syntax region dbBraceMacro matchgroup=dbMacroDelimiter start=/${/ end=/}/ contains=dbVariableWithDefault,dbVariable contained
 syntax match dbVariable /\I\i*/ contained
 syntax match dbVariableWithDefault /\I\i*/ nextgroup=dbVariableWithDefaultOpr skipwhite contained
 syntax match dbVariableWithDefaultOpr /=/ nextgroup=@dbValue skipwhite contained
@@ -40,10 +40,10 @@ syntax keyword dbFieldType A A1CD A1NV A1PV AAWAIT ACKS ACKT ACQM ACQT ACT ADEL 
 
 syntax keyword dbRecord record nextgroup=dbRecordParameters,dbComment skipwhite skipempty
 syntax region dbRecordParameters start=/(/ end=/)/ nextgroup=dbRecordContent contains=dbRecordType,@dbValue,dbComment skipwhite skipempty contained
-syntax region dbRecordContent start=/{/ end=/}/ contains=dbField,dbComment skipwhite skipempty contained
+syntax region dbRecordContent start=/{/ end=/}/ contains=dbField,dbComment skipempty contained
 
 syntax keyword dbField field nextgroup=dbFieldParameters,dbComment skipwhite skipempty
-syntax region dbFieldParameters start=/(/ end=/)/ contains=dbFieldType,@dbValue,dbComment skipwhite skipempty contained
+syntax region dbFieldParameters start=/(/ end=/)/ contains=dbFieldType,@dbValue,dbComment contained
 
 highlight default link dbString String
 highlight default link dbStringSpecial Special
