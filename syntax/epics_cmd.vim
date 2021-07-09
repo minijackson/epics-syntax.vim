@@ -1,3 +1,7 @@
+" File: epics_cmd.vim
+" Author: remi.nicole@cea.fr
+" Company: CEA / DRF / IRFU / LDISC
+" Description: Syntax for EPICS .cmd files
 " Documentation: https://epics.anl.gov/base/R3-14/12-docs/AppDevGuide/node19.html
 
 syntax clear

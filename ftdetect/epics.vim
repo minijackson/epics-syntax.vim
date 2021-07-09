@@ -1,3 +1,8 @@
+" File: epics.vim
+" Author: remi.nicole@cea.fr
+" Company: CEA / DRF / IRFU / LDISC
+" Description: Detects EPICS-related file types
+
 if &compatible || v:version < 603
     finish
 endif

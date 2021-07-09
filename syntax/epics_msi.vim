@@ -1,3 +1,7 @@
+" File: epics_msi.vim
+" Author: remi.nicole@cea.fr
+" Company: CEA / DRF / IRFU / LDISC
+" Description: Syntax for EPICS substitution files
 " Documentation: https://epics.anl.gov/EpicsDocumentation/ExtensionsManuals/msi/msi.html
 
 if exists("b:current_syntax")

@@ -1,3 +1,8 @@
+" File: epics_db.vim
+" Author: remi.nicole@cea.fr
+" Company: CEA / DRF / IRFU / LDISC
+" Description: Syntax for EPICS db files
+
 if exists("b:current_syntax")
     finish
 endif
