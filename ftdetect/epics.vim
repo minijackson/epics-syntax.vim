@@ -8,8 +8,6 @@ if &compatible || v:version < 603
 endif
 
 function ftdetect#epics#SetFileTypeCmd()
-    echom 'hello'
-
     if getline(1) =~# '^#!'
         set filetype=epics_cmd
     endif
